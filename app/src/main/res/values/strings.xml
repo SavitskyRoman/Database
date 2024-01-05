@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">English Cards</string>
+    
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task">Напишите перевод: %s</string>
+    <string name="incorrect_user_write">Вы ввели: %1$s\nПравильный ответ: %2$s</string>
+
+
+</resources>

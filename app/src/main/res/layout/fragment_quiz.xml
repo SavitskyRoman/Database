@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuizFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.database.QuizViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:background="@color/task_layout">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_quiz_fragment"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:id="@+id/name_app_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="center"
+                android:text="@{viewModel.unitNametoWritingFragment}"
+                android:textColor="@color/white"
+                android:textSize="22sp"/>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_margin="18dp"
+
+            app:cardCornerRadius="18dp"
+            app:cardElevation="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.84">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/english_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+
+                    android:text="@{viewModel.englishWordOfSecret}"
+                    android:textColor="@color/task_text"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/transcription_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:gravity="center"
+                    android:text="@{viewModel.transcriptionWordOfSecret}"
+                    android:textColor="@color/task_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/first_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginTop="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:layout_marginEnd="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginBottom="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+
+                    android:background="@drawable/bg_text_view_case_1_4"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_height_for_text_view_case_1_4"
+                    android:paddingStart="@dimen/pading_start_for_text_view_case_1_4"
+
+                    android:text="@{viewModel.firstCase}"
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/text_size_text_view_case_1_4"
+
+                    />
+
+                <TextView
+                    android:id="@+id/second_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginTop="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:layout_marginEnd="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginBottom="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:background="@drawable/bg_text_view_case_1_4"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_height_for_text_view_case_1_4"
+                    android:paddingStart="@dimen/pading_start_for_text_view_case_1_4"
+                    android:text="@{viewModel.secondCase}"
+
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/text_size_text_view_case_1_4" />
+
+                <TextView
+                    android:id="@+id/third_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginTop="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:layout_marginEnd="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginBottom="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:background="@drawable/bg_text_view_case_1_4"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_height_for_text_view_case_1_4"
+
+                    android:paddingStart="@dimen/pading_start_for_text_view_case_1_4"
+
+                    android:text="@{viewModel.thirdCase}"
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/text_size_text_view_case_1_4" />
+
+                <TextView
+                    android:id="@+id/fourth_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginTop="@dimen/layout_marginBottom_and_marginTop_for_text_view_case_1_4"
+                    android:layout_marginEnd="@dimen/layout_marginStart_and_marginEnd_for_text_view_case_1_4"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_text_view_case_1_4"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/min_height_for_text_view_case_1_4"
+                    android:paddingStart="@dimen/pading_start_for_text_view_case_1_4"
+                    android:text="@{viewModel.fourthCase}"
+                    android:textColor="@color/task_text"
+                    android:textSize="@dimen/text_size_text_view_case_1_4" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

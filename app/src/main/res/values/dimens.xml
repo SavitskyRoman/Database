@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_text_view_case_1_4">16sp</dimen>
+    <dimen name="min_height_for_text_view_case_1_4">48dp</dimen>
+    <dimen name="pading_start_for_text_view_case_1_4">16dp</dimen>
+    <dimen name="layout_marginBottom_and_marginTop_for_text_view_case_1_4">8dp</dimen>
+    <dimen name="layout_marginStart_and_marginEnd_for_text_view_case_1_4">16dp</dimen>
+
+    <dimen name="text_margin">16dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+</resources>

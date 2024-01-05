@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tasksFragment">
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.database.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment_to_writingFragment"
+            app:destination="@id/writingFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"
+
+           />
+        <argument
+            android:name="unitName"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_quizFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/writingFragment"
+        android:name="com.example.database.WritingFragment"
+        android:label="fragment_writing"
+        tools:layout="@layout/fragment_writing" >
+        <argument
+            android:name="firstArrayCloneForWritting"
+            app:argType="string[]"
+            />
+        <argument
+            android:name="secondArrayCloneForWritting"
+            app:argType="string[]"
+            />
+        <argument
+            android:name="unitName"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_writingFragment_to_quizFragment2"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_writingFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"
+             />
+
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.database.TasksFragment"
+        android:label="TasksFragment" >
+        <action
+            android:id="@+id/action_tasksFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"
+            />
+
+        <action
+            android:id="@+id/action_tasksFragment_to_changeCardFragment"
+            app:destination="@id/changeCardFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/changeCardFragment"
+        android:name="com.example.database.ChangeCardFragment"
+        android:label="fragment_change_card"
+        tools:layout="@layout/fragment_change_card" >
+        <action
+            android:id="@+id/action_changeCardFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment"
+            app:popUpTo="@id/tasksFragment"
+            app:popUpToInclusive="true"
+            />
+        <argument
+            android:name="taskId"
+            app:argType="long"/>
+    </fragment>
+</navigation>
